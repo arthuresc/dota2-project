@@ -32,15 +32,15 @@ export default function TicTacToe(props) {
 
   return(
     <div className="grid grid-cols-3 grid-rows-3 text-center">
-      <button onClick={changeLest} className="size-16 bg-rose-600 flex justify-items-center">{props.lest}</button>
-      <div className="size-16 bg-rose-600 flex justify-items-center">2</div>
-      <div className="size-16 bg-rose-600 flex justify-items-center">3</div>
-      <div className="size-16 bg-rose-600 flex justify-items-center">4</div>
-      <div className="size-16 bg-rose-600 flex justify-items-center">5</div>
-      <div className="size-16 bg-rose-600 flex justify-items-center">6</div>
-      <div className="size-16 bg-rose-600 flex justify-items-center">7</div>
-      <div className="size-16 bg-rose-600 flex justify-items-center">8</div>
-      <div className="size-16 bg-rose-600 flex justify-items-center">9</div>
+      <button onClick={changeLest} className="size-16 bg-rose-600 flex justify-items-center">1</button>
+      <button className="size-16 bg-rose-600 flex justify-items-center">2</button>
+      <button className="size-16 bg-rose-600 flex justify-items-center">3</button>
+      <button className="size-16 bg-rose-600 flex justify-items-center">4</button>
+      <button className="size-16 bg-rose-600 flex justify-items-center">5</button>
+      <button className="size-16 bg-rose-600 flex justify-items-center">6</button>
+      <button className="size-16 bg-rose-600 flex justify-items-center">7</button>
+      <button className="size-16 bg-rose-600 flex justify-items-center">8</button>
+      <button className="size-16 bg-rose-600 flex justify-items-center">9</button>
     </div>
     
   )
