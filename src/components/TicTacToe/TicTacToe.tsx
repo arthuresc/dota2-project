@@ -1,10 +1,10 @@
 // import { useEffect } from "react";
 
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
 /*
 - Preciso montar um array com todas as possibilidades de jogadas
-- Criar botoes qu alterem um unico objeto
+- Criar botoes que alterem um unico objeto
 - Criar o objeto que regula as casas do jogo, com estado inicial em null cada propriedade, mas será alterada ao decorrer do jogo para 0 (O) ou 1 (X)
 */
 
@@ -12,8 +12,18 @@ import { useEffect, useState } from "react"
 
 // }
 
+const Player = () => {
+  let me = 0
+  const whoami = ():number  => {
+    return me;
+  }
+  const changeMe = () => {
+    me ? me = 0 : me = 1; 
+  }
 
-export default function TicTacToe(props) {
+  return whoami()
+}
+const TicTacToe = (props) => {
 
   console.log(props, ' oiii')
 
