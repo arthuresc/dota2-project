@@ -13,36 +13,59 @@ import { useEffect, useState } from "react";
 // }
 
 const Player = () => {
-  let me = 0
-  const whoami = ():number  => {
-    return me;
-  }
-  const changeMe = () => {
-    me ? me = 0 : me = 1; 
-  }
-
-  return whoami()
+  const boxes = []
+  let id;
+  return data;
 }
-const TicTacToe = (props) => {
+
+const Board= () => {
+  let winner:number
+  const squares:object = {
+    1: null,
+    2: null,
+    3: null,
+    4: null,
+    5: null,
+    6: null,
+    7: null,
+    8: null,
+    9: null,    
+  }
+  function getSquare(player:number, square:number):void {
+    squares[square] = player
+  }
+  function winnerChecker():number {
+    // Criar um 
+  }
+  const plays:number[][] = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9],
+    [1,5,9],
+  ]
+}
+
+
+export default function TicTacToe (props)  {
 
   console.log(props, ' oiii')
 
-  const [lest, setLest] = useState(props.lest)
+  const [last, setLast] = useState(props.last)
 
   useEffect(() => {
-    setLest(props.lest)
-  }, [props.lest])
+    setLast(props.last)
+  }, [props.last])
 
-  function changeLest() {
-    console.log(' rodou', lest)
-    setLest('pinda')
+  function changeLast() {
+    console.log(' rodou', last)
+    setLast('pinda')  
   }
 
 
 
   return(
     <div className="grid grid-cols-3 grid-rows-3 text-center">
-      <button onClick={changeLest} className="size-16 bg-rose-600 flex justify-items-center">1</button>
+      <button onClick={changeLast} className="size-16 bg-rose-600 flex justify-items-center">1</button>
       <button className="size-16 bg-rose-600 flex justify-items-center">2</button>
       <button className="size-16 bg-rose-600 flex justify-items-center">3</button>
       <button className="size-16 bg-rose-600 flex justify-items-center">4</button>
