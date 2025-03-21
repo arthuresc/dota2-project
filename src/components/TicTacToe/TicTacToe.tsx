@@ -12,14 +12,26 @@ import { useEffect, useState } from "react";
 
 // }
 
-const Player = () => {
-  const boxes = []
-  let id;
-  return data;
+interface Player {
+  id: number;
+  squares: number[];
+  wins: number;
 }
 
+const createPlayers = (): [Player, Player] => {
+  const defaultPlayer = { squares: [], wins: 0 }
+  const p1: Player = { ...defaultPlayer, id: 1 };
+  const p2: Player = { ...defaultPlayer, id: 2 };
+  console.log([p1, p2], '🐊')
+  return [p1, p2];
+}
+
+console.log(createPlayers(), '🍦')
+
 const Board= () => {
-  let winner:number
+  let currentPlayer: number = 1;
+
+  let pWinner:number
   const squares:object = {
     1: null,
     2: null,
@@ -34,8 +46,35 @@ const Board= () => {
   function getSquare(player:number, square:number):void {
     squares[square] = player
   }
+
+  let p1Squares: number[] = []
+  let p2Squares: number[] = []
+
+  function getSquareIndex(): void {
+    const keys: string[] = Object.keys(squares)
+    const values: string[] = Object.values(squares)
+    values.forEach((value, index) => {
+      if (value === 1)
+        p1Squares.push(keys[index])
+      if (value === 2)
+        p2Squares.push(keys[index])
+    })
+  }
+
+  getSquareIndex()
+  /**
+   * return 0: none | 1: Player 1 Won | 2: Player 2 Won
+   */
   function winnerChecker():number {
-    // Criar um 
+    // Criar um precisa verificar se existe alguma sequencia feita como está em plays
+    const p1Squares: number[] = squares.maps((item) => {
+      return item === 1;
+    })
+    const p2Squares: number[] = squares.maps((item) => {
+      return item === 2;
+    })
+
+
   }
   const plays:number[][] = [
     [1,2,3],
