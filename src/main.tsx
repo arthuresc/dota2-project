@@ -13,14 +13,15 @@ let router = createBrowserRouter([
     Component: App,
   },
 ]);
+// import * as 'types' from './types/app.d.ts';
 // Teste, código não sera aqui e é só para eu testar, mas para testar se estava exportando do app.d.ts
-// 
+//
 import { AuthContextType } from 'types';
 
 const teste: AuthContextType = {
   authed: true,
   login: (value: string) => value + 'oi',
-  logout: (value: string) => value + 'tchau'
+  logout: (value: string) => value + 'tchau',
 };
 console.log(teste);
 
