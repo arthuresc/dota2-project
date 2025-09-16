@@ -32,7 +32,4 @@
     "src/**/*.tsx",
     "src/**/*.d.tsc",
   ],
-  "exclude": [
-    "node_modules"
-  ]
 }

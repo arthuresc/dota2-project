@@ -2,13 +2,14 @@ import React from 'react';
 import Logo from './Logo';
 import type { MenuProps } from 'antd';
 import { Menu as MenuA } from 'antd';
+import { NavLink } from 'react-router'
 import {
   AppstoreOutlined,
   MailOutlined,
   ExperimentOutlined,
   EllipsisOutlined,
   FundViewOutlined,
-  Icon
+  HomeOutlined,
 } from '@ant-design/icons';
 
 type Props = {};
@@ -24,9 +25,10 @@ const items: MenuItem[] = [
   },
   { type: 'divider' },
   {
-    key: 'sub1',
-    label: 'Navigation One',
-    icon: <ExperimentOutlined />,
+    key: 'home',
+    label: (<NavLink to="/">Home</NavLink>),
+    icon: <HomeOutlined />,
+    // danger: true,
   },
   {
     key: 'sub1/2',

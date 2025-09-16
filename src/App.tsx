@@ -2,8 +2,12 @@
 // import Header from './components/main/Header'
 import { Flex, Layout } from 'antd';
 import './style/index.css';
-import Menu from './components/main/Menu'
+import Menu from './components/main/Menu';
 import Content from './components/main/Content';
+import { ConfigProvider } from "antd"
+// import { useRoutes } from 'react-router';
+// import routes from './routes/routes';
+// import Home from './pages/Home';
 
 const { Header, Footer, Sider, Content: Main } = Layout;
 
@@ -31,20 +35,20 @@ const siderStyle: React.CSSProperties = {
   backgroundColor: '#ff1616ff',
 };
 
-// const footerStyle: React.CSSProperties = {
-//   textAlign: 'center',
-//   color: '#fff',
-//   backgroundColor: '#40ff89ff',
-//   height: '15vh'
-// };
-
 const layoutStyle: React.CSSProperties = {
   // borderRadius: 8,
   overflow: 'hidden',
 };
 
 function App() {
+  ConfigProvider.config({
+    theme: {
+      token: {}
+    }
+  })
+  // const elements = useRoutes(routes)
   return (
+    <ConfigProvider>
       <Flex>
         <Layout hasSider style={layoutStyle}>
           <Sider width="15%" style={siderStyle}>
@@ -53,11 +57,12 @@ function App() {
           <Layout>
             <Header style={headerStyle}></Header>
             <Main style={contentStyle}>
-              <Content></Content>
+              <Content />
             </Main>
           </Layout>
         </Layout>
       </Flex>
+    </ConfigProvider>
   );
 }
 
