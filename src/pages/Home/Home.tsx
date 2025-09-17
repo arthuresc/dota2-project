@@ -1,6 +1,6 @@
 import { Card, Col, Row } from 'antd';
 import Icon from '@ant-design/icons';
-import PariLogo from '../assets/logo_parivision.svg';
+import PariLogo from '../../assets/logo_parivision.svg';
 function Home() {
   return (
     <Row>
@@ -9,6 +9,7 @@ function Home() {
       </Col>
       <Col span={16}>
         <Card
+        style={{textAlign: 'left'}}
           title={
             <>
               <Icon
