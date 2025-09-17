@@ -6,9 +6,14 @@ function Home() {
       <Col span={24}>
         <Card></Card>
       </Col>
+      <Col span={16}>
         <Card></Card>
+      </Col>
+      <Col span={8}>
+        <Card></Card>
+      </Col>
     </Row>
   );
 }
 
-export default <Home />;
+export default Home;

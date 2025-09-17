@@ -1,13 +1,8 @@
-// import { useState } from 'react'
-// import Header from './components/main/Header'
 import { Flex, Layout } from 'antd';
 import './style/index.css';
 import Menu from './components/main/Menu';
 import Content from './components/main/Content';
 import { ConfigProvider } from "antd"
-// import { useRoutes } from 'react-router';
-// import routes from './routes/routes';
-// import Home from './pages/Home';
 
 const { Header, Footer, Sider, Content: Main } = Layout;
 
@@ -18,21 +13,24 @@ const headerStyle: React.CSSProperties = {
   height: '5vh',
   paddingInline: 48,
   lineHeight: '64px',
-  backgroundColor: '#4096ff',
+  // backgroundColor: '#f1f1f1',
 };
 
 const contentStyle: React.CSSProperties = {
+  padding: 8,
   textAlign: 'center',
   minHeight: '50vh',
   lineHeight: '120px',
-  color: '#fff',
-  backgroundColor: '#7409d9ff',
+  // color: '#fff',
+  // backgroundColor: 'colorBgContainer',
+  // backgroundColor: '#7409d9ff',
 };
 
 const siderStyle: React.CSSProperties = {
   lineHeight: '120px',
   color: '#fff',
-  backgroundColor: '#ff1616ff',
+  // backgroundColor: '#fff',
+  // backgroundColor: '#ff1616ff',
 };
 
 const layoutStyle: React.CSSProperties = {
@@ -51,7 +49,7 @@ function App() {
     <ConfigProvider>
       <Flex>
         <Layout hasSider style={layoutStyle}>
-          <Sider width="15%" style={siderStyle}>
+          <Sider  width="20%" style={siderStyle}>
             <Menu></Menu>
           </Sider>
           <Layout>
