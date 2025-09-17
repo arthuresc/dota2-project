@@ -80,7 +80,7 @@ export default function Menu({}: Props) {
       mode="inline"
       defaultOpenKeys={['home']}
       defaultSelectedKeys={['home']}
-      openKeys={defaultRoute}
+      // openKeys={defaultRoute}
       selectedKeys={defaultRoute}
       style={menuStyle}
     />
