@@ -1,15 +1,22 @@
-import { Card, Col, Row } from 'antd';
+import { Card, Col, Row, Space } from 'antd';
 import Icon from '@ant-design/icons';
 import PariLogo from '../../assets/logo_parivision.svg';
+import React from 'react';
+import UpComingMatch from './elements/UpComingMatch';
+
+const spaceStyle: React.CSSProperties = {
+  minWidth: '100%',
+};
 function Home() {
   return (
-    <Row>
+    <Row gutter={[8, 8]}>
       <Col span={24}>
-        <Card></Card>
+        {/* <Card></Card> */}
+        <UpComingMatch/>
       </Col>
       <Col span={16}>
         <Card
-        style={{textAlign: 'left'}}
+          style={{ textAlign: 'left' }}
           title={
             <>
               <Icon
